@@ -1,0 +1,10 @@
+# docker compose up -d --build   (or: yarn up)
+#
+# Serves the built UI on http://localhost:5420. The API is NOT started here — it lives in its own
+# repo (quant-fusion-api); run it there first (`yarn workspace @quant-fusion/api dev`, port 4410).
+services:
+  quant-fusion-ui:
+    build:
+      context: .
+    ports:
+      - '5420:5420'
